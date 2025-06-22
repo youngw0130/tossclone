@@ -106,6 +106,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (int.tryParse(sendAmount) != null) {
                   _sendMoney(idx, int.parse(sendAmount));
                   Navigator.pop(context);
+                  // 송금 완료 알림
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('송금이 완료되었습니다.'),
+                      backgroundColor: Color(0xFF23222A),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
                 }
               },
               child: const Text('확인', style: TextStyle(color: Colors.white)),
@@ -144,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         icon: Icons.account_balance_wallet,
                         iconColor: Color(0xFF2563EB),
                         name: '토스뱅크 가상계좌',
-                        amount: '2,406원',
+                        amount: '9,999,999,999,999원',
                         buttonText: '송금',
                       ),
                       _AccountRow(
@@ -163,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       _CardRow(
                         image: Icons.credit_card,
                         name: '토스유스카드',
-                        amount: '6,400원',
+                        amount: '0원',
                         subText: '3개월 전',
                         buttonText: '충전',
                       ),
