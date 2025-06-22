@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -8,6 +7,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  
   // 계좌 mock 데이터
   List<Map<String, dynamic>> accounts = [
     {
